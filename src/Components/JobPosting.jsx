@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import Input from './ui/Button';
-import Button from './ui/Button';
+import Input from '@/components/ui/input';
+import Button from '@/components/ui/button';
 import { FiHome } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
