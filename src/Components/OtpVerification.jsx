@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Card  from '@/components/ui/card';
+import Card from './ui/Card';
 import CardContent from './ui/CardContent';
-import Input from '@/components/ui/input';
-import Button  from '@/components/ui/button';
+import Input from './ui/Input'
+import Button  from './ui/Button'
 import { Mail } from 'lucide-react'; 
 import { useAuth } from '../context/AuthProvider';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import Button from '@/components/ui/button';
+import Button from './ui/Button'
 import { FiHome } from 'react-icons/fi';
 import axios from 'axios'; // Import axios for making API calls
 
