@@ -21,7 +21,7 @@ const JobPostingPage = () => {
     e.preventDefault(); // Prevent the default form submission behavior
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/jobs', {
+      const response = await axios.post('https://cuvette-assignment-ashutosh-backend.onrender.com/api/auth/jobs', {
         title: jobTitle,
         description: jobDescription,
         experienceLevel,

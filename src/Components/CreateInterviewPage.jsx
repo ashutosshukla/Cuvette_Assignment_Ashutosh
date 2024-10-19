@@ -13,7 +13,7 @@ const CreateInterviewPage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/jobs'); // Update with your endpoint
+        const response = await axios.get('https://cuvette-assignment-ashutosh-backend.onrender.com/api/jobs'); // Update with your endpoint
         setJobs(response.data); // Set job postings to state
       } catch (error) {
         console.error('Error fetching jobs:', error);

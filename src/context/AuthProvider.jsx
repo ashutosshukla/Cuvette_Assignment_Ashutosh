@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`; // Attach token to all requests
       axios
-        .get('http://localhost:5000/api/auth/profile') // Fetch user data if token is valid
+        .get('https://cuvette-assignment-ashutosh-backend.onrender.com/api/auth/profile') // Fetch user data if token is valid
         .then((response) => {
           setUser(response.data.user); // Set the logged-in user data
           navigate('/home'); // Redirect to home if user is already logged in
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
   const signup = async (credentials) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', credentials);
+      const response = await axios.post('https://cuvette-assignment-ashutosh-backend.onrender.com/api/auth/signup', credentials);
       // Assuming signup sends OTP to user's email, handle response as needed
       setError(null);
       navigate('/verify-otp'); // Redirect to OTP verification page
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   const verifyOtp = async ({ email, emailOtp }) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-otp', {
+      const response = await axios.post('https://cuvette-assignment-ashutosh-backend.onrender.com/api/auth/verify-otp', {
         email,
         emailOtp,
       });
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (credentials) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', credentials);
+      const response = await axios.post('https://cuvette-assignment-ashutosh-backend.onrender.com/api/auth/login', credentials);
       const { token, user } = response.data;
 
       // Store token in localStorage
